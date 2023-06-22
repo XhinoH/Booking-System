@@ -1,15 +1,12 @@
-package webapp.controller;
+package backend.controller;
 
 import backend.dto.ClientDto;
-import backend.dto.UserDto;
-import backend.exception.CustomRequestException;
 import backend.security.JwtRequest;
 import backend.security.JwtResponse;
 import backend.security.JwtUtil;
 import backend.security.MyUserDetails;
 import backend.service.UserService;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
