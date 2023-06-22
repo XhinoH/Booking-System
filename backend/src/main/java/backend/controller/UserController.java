@@ -2,7 +2,6 @@ package backend.controller;
 
 import backend.model.dto.UserDto;
 import backend.service.UserService;
-import backend.util.GetterUtil;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -12,11 +11,10 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     private final UserService userService;
-    private final GetterUtil getterUtil;
 
-    public UserController(UserService userService, GetterUtil getterUtil) {
+    public UserController(UserService userService ) {
         this.userService = userService;
-        this.getterUtil = getterUtil;
+
     }
 
     @PostMapping

@@ -1,6 +1,6 @@
 package backend.service.impl;
 
-import backend.enums.ClaimIdentifier;
+import backend.model.enums.ClaimIdentifier;
 import backend.service.TokenService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
