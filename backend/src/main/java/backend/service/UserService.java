@@ -1,6 +1,6 @@
 package backend.service;
 
-import backend.module.dto.UserDto;
+import backend.model.dto.UserDto;
 
 import java.util.List;
 

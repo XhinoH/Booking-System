@@ -1,7 +1,6 @@
 package backend.service.impl;
 
-
-import com.lhind.repository.UserRepository;
+import backend.repository.UserRepository;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -24,7 +23,7 @@ public class CustomUserDetailsService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("Username not found"));
     }
 
-    private UserDetails toUserDetails(com.lhind.model.entity.User user) {
+    private UserDetails toUserDetails(backend.model.entity.User user) {
         return User.builder()
                 .username(user.getUsername())
                 .password(user.getPassword())

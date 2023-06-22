@@ -1,12 +1,12 @@
 package backend.service.impl;
 
-import backend.module.dto.RoleDto;
-import backend.module.dto.UserDto;
 import backend.exception.CustomRequestException;
 import backend.exception.InvalidRequestException;
-import backend.model.Role;
-import backend.model.User;
-import backend.model.UserDetail;
+import backend.model.dto.RoleDto;
+import backend.model.dto.UserDto;
+import backend.model.entity.Role;
+import backend.model.entity.User;
+import backend.model.entity.UserDetail;
 import backend.repository.RoleRepository;
 import backend.repository.UserDetailRepository;
 import backend.repository.UserRepository;
@@ -169,7 +169,7 @@ public class UserServiceImpl implements UserService {
         if (userOptional.isPresent()) {
             User user = userOptional.get();
             for (Role role : user.getRoles()){
-                if (role.getName().equalsIgnoreCase("role_admin")){
+                if (role.getDescription().equalsIgnoreCase("role_admin")){
                     throw new CustomRequestException("You can not view other admins info");
                 }
             }
@@ -193,7 +193,7 @@ public class UserServiceImpl implements UserService {
                 roleSet.add(role);
                 user.setRoles(roleSet);
 
-                logger.info("Added role " + role.getName() + " to user " + user.getUsername());
+                logger.info("Added role " + role.getDescription() + " to user " + user.getUsername());
 
                 return dtoConversion.convertUser(userRepository.save(user));
             } else {

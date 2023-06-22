@@ -1,9 +1,9 @@
 package backend.service.impl;
 
-import backend.module.dto.RoleDto;
 import backend.exception.CustomRequestException;
 import backend.exception.InvalidRequestException;
-import backend.model.Role;
+import backend.model.dto.RoleDto;
+import backend.model.entity.Role;
 import backend.repository.RoleRepository;
 import backend.service.RoleService;
 import backend.util.DtoConversion;
@@ -44,18 +44,7 @@ public class RoleServiceImpl implements RoleService {
             role = new Role();
         }
 
-        if (roleDto.getName() != null){
-            Optional<Role> roleOptional = roleRepository.findByName(roleDto.getName());
-            if (roleOptional.isEmpty()){
-                role.setName(roleDto.getName());
-            } else {
-                throw new CustomRequestException("Role with this name exists");
-            }
-        } else {
-            throw new InvalidRequestException("Role name is invalid");
-        }
-
-        logger.info("Saved role with name: " + role.getName());
+        logger.info("Saved role with name: " + role.getDescription());
         return dtoConversion.convertRole(roleRepository.save(role));
     }
 

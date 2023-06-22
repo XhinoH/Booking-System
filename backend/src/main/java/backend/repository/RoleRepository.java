@@ -1,6 +1,6 @@
 package backend.repository;
 
-import backend.model.Role;
+import backend.model.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

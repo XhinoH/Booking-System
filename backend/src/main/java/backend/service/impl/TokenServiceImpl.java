@@ -1,7 +1,7 @@
 package backend.service.impl;
 
-import com.lhind.model.enums.ClaimIdentifier;
-import com.lhind.service.TokenService;
+import backend.enums.ClaimIdentifier;
+import backend.service.TokenService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.core.GrantedAuthority;

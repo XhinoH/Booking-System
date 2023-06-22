@@ -1,6 +1,6 @@
 package backend.controller;
 
-import backend.module.dto.RoleDto;
+import backend.model.dto.RoleDto;
 import backend.service.RoleService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

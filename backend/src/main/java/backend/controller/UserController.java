@@ -1,6 +1,6 @@
 package backend.controller;
 
-import backend.module.dto.UserDto;
+import backend.model.dto.UserDto;
 import backend.service.UserService;
 import backend.util.GetterUtil;
 import org.springframework.http.ResponseEntity;

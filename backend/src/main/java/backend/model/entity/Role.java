@@ -1,30 +1,23 @@
 package backend.model.entity;
 
+import backend.model.enums.RoleEnum;
+
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "role")
 public class Role {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "name")
-    private String name;
+    @Enumerated(value = EnumType.STRING)
+    @Column(name = "role", nullable = false)
+    private RoleEnum role;
 
-    @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
-    private List<User> userList = new ArrayList<>();
-
-
-
-    ///////////////////////////////////////////////////////////////////////
-    ///////////////////////// GETTERS AND SETTERS /////////////////////////
-    ///////////////////////////////////////////////////////////////////////
-
+    @Column(name = "description")
+    private String description;
 
     public Integer getId() {
         return id;
@@ -34,19 +27,28 @@ public class Role {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public RoleEnum getRole() {
+        return role;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRole(RoleEnum role) {
+        this.role = role;
     }
 
-    public List<User> getUserList() {
-        return userList;
+    public String getDescription() {
+        return description;
     }
 
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Role{" +
+                "id=" + id +
+                ", role=" + role +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
