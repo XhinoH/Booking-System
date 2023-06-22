@@ -6,7 +6,6 @@ import backend.repository.RestaurantRepository;
 import backend.repository.UserRepository;
 import backend.security.JwtUtil;
 import org.springframework.stereotype.Component;
-import org.springframework.web.server.ResponseStatusException;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;

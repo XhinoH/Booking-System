@@ -1,13 +1,11 @@
 package backend.controller;
 
-import backend.dto.UserDto;
+import backend.module.dto.UserDto;
 import backend.service.UserService;
 import backend.util.GetterUtil;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/users")

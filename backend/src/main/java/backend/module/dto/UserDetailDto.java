@@ -1,8 +1,6 @@
-package backend.dto;
+package backend.module.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import javax.persistence.Column;
 
 public class UserDetailDto {
 

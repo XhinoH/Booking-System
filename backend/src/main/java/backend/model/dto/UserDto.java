@@ -1,5 +1,4 @@
-package backend.dto;
-
+package backend.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

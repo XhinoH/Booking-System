@@ -1,6 +1,6 @@
 package backend.service.impl;
 
-import backend.dto.RoleDto;
+import backend.module.dto.RoleDto;
 import backend.exception.CustomRequestException;
 import backend.exception.InvalidRequestException;
 import backend.model.Role;
@@ -11,7 +11,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
-import java.util.InvalidPropertiesFormatException;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;

@@ -1,7 +1,6 @@
 package backend.service;
 
-import backend.dto.OrderDto;
-import backend.dto.RoleDto;
+import backend.module.dto.RoleDto;
 
 import java.util.List;
 

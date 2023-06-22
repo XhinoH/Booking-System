@@ -1,7 +1,11 @@
 package backend.util;
 
-import backend.dto.*;
-import backend.model.*;
+import backend.module.dto.RoleDto;
+import backend.module.dto.UserDetailDto;
+import backend.module.dto.UserDto;
+import backend.model.Role;
+import backend.model.User;
+import backend.model.UserDetail;
 
 import java.util.stream.Collectors;
 

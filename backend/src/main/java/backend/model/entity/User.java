@@ -1,4 +1,4 @@
-package backend.model;
+package backend.model.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;

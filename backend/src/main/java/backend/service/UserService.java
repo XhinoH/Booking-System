@@ -1,13 +1,11 @@
 package backend.service;
 
-import backend.dto.ClientDto;
-import backend.dto.UserDto;
+import backend.module.dto.UserDto;
 
 import java.util.List;
 
 public interface UserService {
     public UserDto save(UserDto userDto);
-    public ClientDto saveClient(ClientDto clientDto, String clientUsername);
     public List<UserDto> findAll();
     public List<UserDto> findAllByRole(String roleName);
     public UserDto findById(Integer id);
