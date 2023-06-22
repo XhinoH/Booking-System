@@ -1,6 +1,5 @@
 package backend.controller;
 
-import backend.dto.ClientDto;
 import backend.security.JwtRequest;
 import backend.security.JwtResponse;
 import backend.security.JwtUtil;
@@ -48,12 +47,6 @@ public class AuthenticationController {
         final String token = jwtTokenUtil.generateToken(userDetails);
 
         return ResponseEntity.ok(new JwtResponse(token));
-    }
-
-    @PostMapping("/register")
-    public ResponseEntity<?> saveClient(@RequestBody ClientDto clientDto){
-        return ResponseEntity.ok(userService.saveClient(clientDto, null));
-
     }
 
     private void authenticate(String username, String password) throws Exception {

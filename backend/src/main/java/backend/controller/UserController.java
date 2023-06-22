@@ -1,6 +1,5 @@
 package backend.controller;
 
-import backend.dto.ClientDto;
 import backend.dto.UserDto;
 import backend.service.UserService;
 import backend.util.GetterUtil;
@@ -75,14 +74,6 @@ public class UserController {
     public ResponseEntity<?> findAll(){
 
         return ResponseEntity.ok(userService.findAll());
-
-    }
-
-    @PutMapping("/clients")
-    @PreAuthorize("hasRole('ROLE_CLIENT')")
-    public ResponseEntity<?> updateClient(@RequestBody ClientDto clientDto, HttpServletRequest request){
-
-        return ResponseEntity.ok(userService.saveClient(clientDto, getterUtil.getUsernameFromRequest(request)));
 
     }
 
